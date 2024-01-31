@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* :root {
+    color-scheme: light dark;
+
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+  }
+
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      color: #213547;
+      background-color: #ffffff;
+    }
+  } */
+
+}
+
+@layer components {
+  [role=tablist]{
+    @apply flex border-b text-lg font-medium bg-slate-100;
+    @apply hidden;
+  }
+
+  [role=tab]{
+    @apply inline-flex px-6 py-3 gap-2 items-center border-b-2 bg-slate-50;
+  }
+
+  [role=tab][aria-current]{
+    @apply text-purple-600 border-b-2 border-purple-600;
+  }
+
+  main {
+    /* @apply grid; */
+    /* grid-template-columns: 40% 60%; */
+    /* grid-template-rows: repeat(2, 50%) */
+  }
+
+  #handle {
+    z-index: 10000;
+    @apply absolute rounded-full bg-red-800 cursor-move opacity-0 hover:opacity-50;
+    left: calc(40% - 15px);
+    top: calc(50% - 15px);
+    width: 30px;
+    height: 30px;
+  }
+
+  select {
+    font-family: 'Linux Libertine O', sans-serif;
+    /* font-family: 'Linux Libertine Display O', sans-serif; */
+    /* font-family: 'Linux Libertine Initials O', sans-serif; */
+    /* font-family: 'Linux Libertine Mono O', sans-serif; */
+  }
+
+}

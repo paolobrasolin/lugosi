@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>remola</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/linux-libertine-o" rel="stylesheet">
+</head>
+
+<body class="flex flex-col w-screen h-screen overflow-hidden" data-controller="tab">
+
+  <nav role="tablist">
+    <button role="tab" id="diagram-tab" aria-controls="diagram-tabpanel" data-action="click->tab#switch" aria-current>
+      <span class="material-icons">schema</span>
+      Diagram
+    </button>
+    <button role="tab" id="grammar-tab" aria-controls="grammar-tabpanel" data-action="click->tab#switch">
+      <span class="material-icons">code</span>
+      Grammar
+    </button>
+    <button role="tab" id="explorer-tab" aria-controls="explorer-tabpanel" data-action="click->tab#switch">
+      <span class="material-icons">science</span>
+      Explorer
+    </button>
+    <button role="tab" id="help-tab" aria-controls="help-tabpanel" data-action="click->tab#switch">
+      <span class="material-icons">help</span>
+      Help
+    </button>
+  </nav>
+
+  <main role="region" aria-live="polite" class="bg-slate-50 h-full" data-controller="bezzy">
+    <div class="w-full h-full" data-bezzy-target="container"></div>
+  </main>
+
+  <script type="module" src="index.ts"></script>
+</body>
+
+</html>
